@@ -45,15 +45,27 @@ export default function Footer() {
 
           <div className="social-icons">
 
-            <a href="#">
+            <a
+              href="https://github.com/smsn412-svg"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FiGithub />
             </a>
 
-            <a href="#">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FiInstagram />
             </a>
 
-            <a href="#">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FiFacebook />
             </a>
 
@@ -74,4 +86,3 @@ export default function Footer() {
     </footer>
   );
 }
-
