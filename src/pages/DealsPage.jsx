@@ -31,7 +31,6 @@ export default function DealsPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [products, setProducts] = useState([]);
 
-  // Slider
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) =>
@@ -41,8 +40,7 @@ export default function DealsPage() {
 
     return () => clearInterval(timer);
   }, []);
-
-  // Products
+ 
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -66,7 +64,7 @@ export default function DealsPage() {
   return (
     <main className="deals-page">
 
-      {/* Hero Slider */}
+
       <div
         className="hero-slider"
         style={{
@@ -112,7 +110,7 @@ export default function DealsPage() {
         </div>
       </div>
 
-      {/* Promo Cards */}
+
       <section className="promo-section">
 
         <div className="promo-card">
@@ -137,13 +135,10 @@ export default function DealsPage() {
 
       </section>
 
-      {/* Special Offers */}
-      <section className="special-offers">
 
-        <h2>🔥 Special Offers</h2>
-
-        <div className="offers-grid">
-
+      <section className="special-offers"> 
+        <h2>🔥 Special Offers</h2> 
+        <div className="offers-grid"> 
           {deals.map((product) => (
             <ProductCard
               key={product.id}

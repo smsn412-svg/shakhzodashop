@@ -1,8 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
-import { FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi";
-import { HiOutlineShoppingBag } from "react-icons/hi";
-import { useCart } from "../../context/CartContext";
-import "./Header.css";
+import { Link, NavLink } from "react-router-dom"
+import { FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi"
+import { HiOutlineShoppingBag } from "react-icons/hi"
+import { useCart } from "../../context/CartContext"
+import "./Header.css"
 
 export default function Header({
   search,
@@ -15,13 +15,11 @@ export default function Header({
   return (
     <header className="header">
 
-      {/* Logo */}
       <Link to="/" className="logo">
         <HiOutlineShoppingBag />
         <span>ShakhzodaShop</span>
       </Link>
 
-      {/* Navigation */}
       <nav className="nav">
         <NavLink to="/">Home</NavLink>
 
@@ -29,7 +27,6 @@ export default function Header({
         <NavLink to="/about">About</NavLink>
       </nav>
 
-      {/* Search */}
       <div className="search">
         <FiSearch />
 
@@ -41,7 +38,6 @@ export default function Header({
         />
       </div>
 
-      {/* Right */}
       <div className="actions">
 
         <Link to="/favorites" className="icon">

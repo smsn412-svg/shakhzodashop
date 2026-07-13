@@ -1,24 +1,24 @@
-import { Link } from "react-router-dom";
-import { FiHeart, FiShoppingCart } from "react-icons/fi";
-import { useFavorites } from "../../context/FavoritesContext";
-import "./ProductCard.css";
+import { Link } from "react-router-dom"
+import { FiHeart, FiShoppingCart } from "react-icons/fi"
+import { useFavorites } from "../../context/FavoritesContext"
+import "./ProductCard.css"
 
 export default function ProductCard({ product, addToCart }) {
   const {
     addToFavorites,
     removeFromFavorites,
     isFavorite,
-  } = useFavorites();
+  } = useFavorites()
 
-  const favorite = isFavorite(product.id);
+  const favorite = isFavorite(product.id)
 
   const handleFavorite = () => {
     if (favorite) {
-      removeFromFavorites(product.id);
+      removeFromFavorites(product.id)
     } else {
-      addToFavorites(product);
+      addToFavorites(product)
     }
-  };
+  }
 
   return (
     <article className="card">
@@ -72,5 +72,5 @@ export default function ProductCard({ product, addToCart }) {
       </button>
 
     </article>
-  );
+  )
 }

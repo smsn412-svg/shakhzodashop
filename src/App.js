@@ -1,38 +1,38 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "./App.css"
 
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 
-import CatalogPage from "./pages/CatalogPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-import CartPage from "./pages/CartPage";
-import FavoritesPage from "./pages/FavoritesPage";
-import DealsPage from "./pages/DealsPage";
-import AboutPage from "./pages/AboutPage";
+import CatalogPage from "./pages/CatalogPage"
+import ProductDetailsPage from "./pages/ProductDetailsPage"
+import CartPage from "./pages/CartPage"
+import FavoritesPage from "./pages/FavoritesPage"
+import DealsPage from "./pages/DealsPage"
+import AboutPage from "./pages/AboutPage"
 
-import { FavoritesProvider } from "./context/FavoritesContext";
-import { CartProvider, useCart } from "./context/CartContext";
+import { FavoritesProvider } from "./context/FavoritesContext"
+import { CartProvider, useCart } from "./context/CartContext"
 
 function App() {
   return (
     <BrowserRouter>
       <FavoritesProvider>
         <CartProvider>
-          <MainApp />
+          < MainApp />
         </CartProvider>
       </FavoritesProvider>
     </BrowserRouter>
-  );
+  )
 }
 
 function MainApp() {
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("all");
+  const [search, setSearch] = useState("")
+  const [category, setCategory] = useState("all")
 
-  const { toast } = useCart();
+  const { toast } = useCart()
 
   return (
     <main className="container">
@@ -89,7 +89,7 @@ function MainApp() {
         </div>
       )}
     </main>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -3,32 +3,23 @@
 }
 
 .about-hero{
-    background:#1f2937;
-
-    border-radius:22px;
-
-    padding:90px 60px;
-
+    background:#1f2937; 
+    border-radius:22px; 
+    padding:90px 60px; 
     text-align:center;
 }
 
 .about-hero h1{
-    color:#fff;
-
-    font-size:58px;
-
+    color:#fff; 
+    font-size:58px; 
     margin-bottom:25px;
 }
 
 .about-hero p{
-    max-width:760px;
-
-    margin:auto;
-
-    color:#9ca3af;
-
-    font-size:20px;
-
+    max-width:760px; 
+    margin:auto; 
+    color:#9ca3af; 
+    font-size:20px; 
     line-height:1.8;
 }
 
@@ -36,8 +27,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:60px;
-
+    gap:60px; 
     margin-top:80px;
 }
 
@@ -94,32 +84,26 @@
     text-align:center;
     transition:.3s;
     border:1px solid rgba(255,255,255,.08);
-    min-height:170px;
-
+    min-height:170px; 
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
 .stat-card:hover{
-    transform:translateY(-8px);
-
-    border-color:#2563eb;
-
+    transform:translateY(-8px); 
+    border-color:#2563eb; 
     box-shadow:0 10px 25px rgba(37,99,235,.25);
 }
 
 .stat-card h2{
-    color:#2563eb;
-
-    font-size:42px;
-
+    color:#2563eb; 
+    font-size:42px; 
     margin-bottom:12px;
 }
 
 .stat-card p{
-    color:#d1d5db;
-
+    color:#d1d5db; 
     font-size:18px;
 }
 

@@ -1,56 +1,56 @@
 import { useState, useEffect } from "react";
-import { useCart } from "../context/CartContext";
-import ProductCard from "../components/ProductCard/ProductCard";
+import { useCart } from "../context/CartContext"
+import ProductCard from "../components/ProductCard/ProductCard"
 import {
   FiHome,
   FiCpu,
   FiAward,
   FiUser,
   FiShoppingCart,
-} from "react-icons/fi";
-import "./CatalogPage.css";
+} from "react-icons/fi"
+import "./CatalogPage.css"
 
-const API_URL = "https://fakestoreapi.com/products";
+const API_URL = "https://fakestoreapi.com/products"
 
 export default function CatalogPage({ search, category, setCategory }) {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-  const { addToCart } = useCart();
+  const { addToCart } = useCart()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
+        setLoading(true)
 
         const url =
           category === "all"
             ? API_URL
-            : `${API_URL}/category/${category}`;
+            : `${API_URL}/category/${category}`
 
-        const res = await fetch(url);
+        const res = await fetch(url)
 
-        if (!res.ok) throw new Error("Error loading products");
+        if (!res.ok) throw new Error("Error loading products")
 
-        const data = await res.json();
-        setProducts(data);
+        const data = await res.json()
+        setProducts(data)
       } catch (err) {
-        setError(err.message);
+        setError(err.message)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchData();
-  }, [category]);
+    fetchData()
+  }, [category])
 
-  if (loading) return <div className="loader">Loading...</div>;
-  if (error) return <div className="error">{error}</div>;
+  if (loading) return <div className="loader">Loading...</div>
+  if (error) return <div className="error">{error}</div>
 
   const filtered = products.filter(p =>
     p.title.toLowerCase().includes((search || "").toLowerCase())
-  );
+  )
 
   return (
     <main className="catalog">
@@ -105,7 +105,6 @@ export default function CatalogPage({ search, category, setCategory }) {
     <section className="products-area">
 
       <div className="products-top">
-  {/* <h2 className="products-title">All Products</h2> */}
 </div>
 
       <div className="grid">
@@ -123,5 +122,5 @@ export default function CatalogPage({ search, category, setCategory }) {
   </div>
 
 </main>
-  );
+  )
 }
